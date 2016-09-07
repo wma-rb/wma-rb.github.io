@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-push-8">
+      <!-- margin 0 auto to center image -->
+      <img class="img-responsive" src="images/riseLogo.png" width="80%" height="auto" style="margin: 0 auto">
+    </div>
+    <div class="col-md-8 col-md-pull-4">
+      <form name="fccForm" ng-submit="submit()">
+        <div class="form-group">
+          <label for="tID">Technician ID</label>
+          <input type="text" class="form-control" id="tID" ng-model="selected.tech" required>
+        </div>
+        <div class="form-group">
+          <label for="custAcct">Customer Account</label>
+          <input type="text" class="form-control" id="custAcct" placeholder="8137xxxxxxxxxxxx" ng-model="selected.acct" ng-required="!selected.mac">
+        </div>
+        <div class="form-group">
+          <label for="custAddr">Customer Address</label>
+          <input type="text" class="form-control" id="custAddr" ng-model="selected.addr" required>
+        </div>
+        <div class="form-group">
+          <label for="macAddr">Radio MAC Address</label>
+          <input type="text" class="form-control" id="macAddr" placeholder="0A003E******" ng-model="selected.mac" ng-required="!selected.acct">
+        </div>
+        <div class="form-group">
+          <label for="antTp">Radio Model</label>
+          <select class="form-control" id="antTp" ng-model="selected.antenna" ng-options="item for item in antennae">
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="buildHt">Mount Height</label>
+          <input type="text" class="form-control" id="mountHt" placeholder="Height of base of mount above ground level in feet" ng-model="selected.mtHt" required>
+        </div>
+        <div class="form-group">
+          <label for="radHt">Radio Height</label>
+          <input type="text" class="form-control" id="radHt" placeholder="Height of radio above ground level in feet" ng-model="selected.radHt" required>
+        </div>
+        <div class="form-group">
+          <label for="mtTp">Mount Type</label>
+          <select class="form-control" id="mtTp" ng-model="selected.mount" ng-options="item for item in masts">
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-disabled="fccForm.$invalid">Continue</button>
+      </form>
+    </div>
+  </div>
+</div>

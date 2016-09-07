@@ -1,0 +1,13 @@
+body {
+  margin-top: 60px;
+  padding: 10px;
+  background-color: #ECF0F1;
+}
+map {
+  display: block;
+  /* width: 80vmin; */
+  height: 80vmin;
+}
+.scroll {
+  height: 100%;
+}

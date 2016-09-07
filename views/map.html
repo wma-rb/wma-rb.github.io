@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-md-push-8">
+      <!-- margin 0 auto to center image -->
+      <img class="img-responsive" src="images/riseLogo.png" width="80%" height="auto" style="margin: auto">
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-8 col-md-pull-4">
+      <label for="map">Please confirm your location:</label>
+      <map id="map" on-create="mapCreated(map)"> </map>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" style="height: 2vmin">
+    </div>
+    <div class="col-xs-12">
+      <button id="backBtn" class="btn btn-primary" ui-sref="form">
+        Previous
+      </button>
+      <button id="submitBtn" class="btn btn-primary" ng-click="submit()">
+        Confirm
+      </button>
+    </div>
+  </div>
+</div>
